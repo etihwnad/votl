@@ -381,7 +381,8 @@ function VotlInsertDateTime(location, stamp) "{{{
     elseif a:stamp == 1
         let @x = strftime("%T")
     else " a:stamp == 2
-        let @x = strftime("%Y-%m-%d %T")
+        "let @x = strftime("%Y-%m-%d %T")
+        let @x = strftime("%Y-%m-%d %R") "DJW: no seconds in time
     endif
 
     if a:location == 0
